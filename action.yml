@@ -1,0 +1,12 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  version-type:
+    description: 'Version type (release/develop)'
+    required: true
+    default: 'develop'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.version-type }}
