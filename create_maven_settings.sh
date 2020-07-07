@@ -69,6 +69,7 @@ set -e
 v_type=${1:-}
 profile_release=${2:-"deployment-release"}
 profile_develop=${3:-"deployment-development"}
+settings_path=${"~/settings.xml"}
 
 echo "Using development profile ${profile_develop}";
 echo "Using release profile ${profile_release}";
@@ -155,8 +156,8 @@ echo "Using release profile ${profile_release}";
    echo "</activeProfiles>"
 
    echo "</settings>";
-} >> ~/settings.xml
+} >> ${settings_path}
 
-echo "Created Maven settings file"
+echo "Created Maven settings file at ${settings_path}"
 
 exit 0
