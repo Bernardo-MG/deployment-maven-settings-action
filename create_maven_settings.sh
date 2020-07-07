@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Function for creating the Maven settings file for the CI process, storing it in the
 # ~/settings.xml path.
