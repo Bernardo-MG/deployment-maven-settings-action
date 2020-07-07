@@ -155,7 +155,7 @@ echo "Using release profile ${profile_release}";
    echo "</activeProfiles>"
 
    echo "</settings>";
-} >> ~/settings.xml
+} >> settings.xml
 
 echo "Created Maven settings file"
 
