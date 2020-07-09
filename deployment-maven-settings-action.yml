@@ -4,7 +4,6 @@ inputs:
   version-type:
     description: 'Version type (release/develop)'
     required: true
-    default: 'develop'
 runs:
   using: 'docker'
   image: 'Dockerfile'
