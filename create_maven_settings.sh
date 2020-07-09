@@ -71,6 +71,7 @@ profile_release=${2:-"deployment-release"}
 profile_develop=${3:-"deployment-development"}
 settings_path="settings.xml"
 
+echo "Received type $1";
 echo "Artifact version type ${v_type}";
 echo "Using development profile ${profile_develop}";
 echo "Using release profile ${profile_release}";
