@@ -66,7 +66,7 @@
 # Fails if any commands returns a non-zero value
 set -e
 
-v_type=${1:-}
+v_type=${1}
 profile_release=${2:-"deployment-release"}
 profile_develop=${3:-"deployment-development"}
 settings_path="settings.xml"
