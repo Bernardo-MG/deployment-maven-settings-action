@@ -99,6 +99,11 @@ echo "Using release profile ${profile_release}";
          echo "<id>site</id>";
          echo "<username>\${DEPLOY_DOCS_USER}</username>";
          echo "<password>\${DEPLOY_DOCS_PASSWORD}</password>";
+         echo "<configuration>";
+            echo "<strictHostKeyChecking>no</strictHostKeyChecking>";
+            echo "<preferredAuthentications>publickey,password</preferredAuthentications>";
+            echo "<interactive>false</interactive>";
+         echo "</configuration>";
       echo "</server>";
    fi
 
@@ -116,6 +121,11 @@ echo "Using release profile ${profile_release}";
          echo "<id>site-development</id>";
          echo "<username>\${DEPLOY_DOCS_DEVELOP_USER}</username>";
          echo "<password>\${DEPLOY_DOCS_DEVELOP_PASSWORD}</password>";
+         echo "<configuration>";
+            echo "<strictHostKeyChecking>no</strictHostKeyChecking>";
+            echo "<preferredAuthentications>publickey,password</preferredAuthentications>";
+            echo "<interactive>false</interactive>";
+         echo "</configuration>";
       echo "</server>";
    fi
 
