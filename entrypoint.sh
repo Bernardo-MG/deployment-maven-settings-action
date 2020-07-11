@@ -69,7 +69,7 @@ set -e
 v_type=${1}
 profile_release=${2:-"deployment-release"}
 profile_develop=${3:-"deployment-development"}
-settings_path="settings.xml"
+settings_path="~/settings.xml"
 
 echo "Artifact version type ${v_type}";
 echo "Using development profile ${profile_develop}";
