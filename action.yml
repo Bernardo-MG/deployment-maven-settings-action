@@ -2,7 +2,7 @@ name: 'Build Maven settings for deployment'
 description: 'Build Maven settings for deploying artifacts'
 inputs:
   version-type:
-    description: 'Version type (release/develop)'
+    description: 'Version type (master/develop)'
     required: true
 runs:
   using: 'docker'
