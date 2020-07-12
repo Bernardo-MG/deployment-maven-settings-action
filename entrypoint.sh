@@ -89,16 +89,16 @@ echo "Using release profile ${profile_release}";
    if [ -n "${DEPLOY_USER}" ]; then
       echo "<server>";
          echo "<id>releases</id>";
-         echo "<username>\${DEPLOY_USER}</username>";
-         echo "<password>\${DEPLOY_PASSWORD}</password>";
+         echo "<username>${DEPLOY_USER}</username>";
+         echo "<password>${DEPLOY_PASSWORD}</password>";
       echo "</server>";
    fi
    # Release site server
    if [ -n "${DEPLOY_DOCS_USER}" ]; then
       echo "<server>";
          echo "<id>site</id>";
-         echo "<username>\${DEPLOY_DOCS_USER}</username>";
-         echo "<password>\${DEPLOY_DOCS_PASSWORD}</password>";
+         echo "<username>${DEPLOY_DOCS_USER}</username>";
+         echo "<password>${DEPLOY_DOCS_PASSWORD}</password>";
          echo "<configuration>";
             echo "<strictHostKeyChecking>no</strictHostKeyChecking>";
             echo "<preferredAuthentications>publickey,password</preferredAuthentications>";
@@ -111,16 +111,16 @@ echo "Using release profile ${profile_release}";
    if [ -n "${DEPLOY_DEVELOP_USER}" ]; then
       echo "<server>";
          echo "<id>snapshots</id>";
-         echo "<username>\${DEPLOY_DEVELOP_USER}</username>";
-         echo "<password>\${DEPLOY_DEVELOP_PASSWORD}</password>";
+         echo "<username>${DEPLOY_DEVELOP_USER}</username>";
+         echo "<password>${DEPLOY_DEVELOP_PASSWORD}</password>";
       echo "</server>";
    fi
    # Development site server
    if [ -n "${DEPLOY_DOCS_DEVELOP_USER}" ]; then
       echo "<server>";
          echo "<id>site-development</id>";
-         echo "<username>\${DEPLOY_DOCS_DEVELOP_USER}</username>";
-         echo "<password>\${DEPLOY_DOCS_DEVELOP_PASSWORD}</password>";
+         echo "<username>${DEPLOY_DOCS_DEVELOP_USER}</username>";
+         echo "<password>${DEPLOY_DOCS_DEVELOP_PASSWORD}</password>";
          echo "<configuration>";
             echo "<strictHostKeyChecking>no</strictHostKeyChecking>";
             echo "<preferredAuthentications>publickey,password</preferredAuthentications>";
