@@ -4,8 +4,18 @@ inputs:
   version-type:
     description: 'Version type (master/develop)'
     required: true
+  deployment-profile:
+    description: 'Name of the deployment profile'
+    required: false
+    default: deployment-release
+  deployment-develop-profile:
+    description: 'Name of the deployment profile for development'
+    required: false
+    default: deployment-development
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.version-type }}
+    - ${{ inputs.deployment-profile }}
+    - ${{ inputs.deployment-develop-profile }}

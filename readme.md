@@ -11,6 +11,8 @@ Sets up the Maven settings for deploying artifacts. These may be JARs, WARs, Mav
 ### Inputs
 
 - version-type: the version being built (release/develop)
+- deployment-profile: name of the deployment profile (optional)
+- deployment-develop-profile: name of the deployment for development profile (optional)
 
 ## Collaborate
 
