@@ -24,25 +24,6 @@
 # - snapshots: for deploying snapshot artifacts
 # - site-development: for deploying the Maven site for the development version
 #
-# --- PROFILES ---
-#
-# One of two profiles may be set, depending on the type of version, which is read from
-# the VERSION_TYPE environmental variable.
-#
-# By default these profiles are:
-#
-# - deployment-release: for setting up the release deployment
-# - deployment-development: for setting up the development deployment
-#
-# They can be changed through the parameters.
-#
-# -- PARAMETERS --
-#
-# The function expects the following parameters:
-# $1: A string, one of master|develop, otherwise it is ignored.
-# $2: A string, the name of the profile with the release deployment configuration.
-# $3: A string, the name of the profile with the snapshot deployment configuration.
-#
 # --- ENVIRONMENTAL VARIABLES ---
 #
 # The following environmental variables are required by the script, but read by Maven:
@@ -66,14 +47,7 @@
 # Fails if any commands returns a non-zero value
 set -e
 
-v_type=${1}
-profile_release=${2:-"deployment-release"}
-profile_develop=${3:-"deployment-development"}
 settings_path="settings.xml"
-
-echo "Artifact version type ${v_type}";
-echo "Using development profile ${profile_develop}";
-echo "Using release profile ${profile_release}";
 
 # The contents of the file are created
 {
@@ -149,22 +123,6 @@ echo "Using release profile ${profile_release}";
       echo "</profile>";
 
    echo "</profiles>";
-
-   # --------------
-   # Active profile
-   # --------------
-
-   # These profiles are used to set configuration specific to a version type
-   echo "<activeProfiles>"
-      if [ "${v_type}" == "master" ]; then
-         # Release version
-         echo "<activeProfile>${profile_release}</activeProfile>"
-      elif [ "${v_type}" == "develop" ]; then
-         # Development version
-         echo "<activeProfile>${profile_develop}</activeProfile>"
-      fi
-      echo "<activeProfile>deployment_site</activeProfile>"
-   echo "</activeProfiles>"
 
    echo "</settings>";
 } >> ${settings_path}
