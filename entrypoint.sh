@@ -122,6 +122,8 @@ settings_path="settings.xml"
          echo "</properties>"
       echo "</profile>";
 
+   echo "</profiles>";
+
    # --------------
    # Active profile
    # --------------
@@ -130,8 +132,6 @@ settings_path="settings.xml"
    echo "<activeProfiles>"
       echo "<activeProfile>deployment_site</activeProfile>"
    echo "</activeProfiles>"
-
-   echo "</profiles>";
 
    echo "</settings>";
 } >> ${settings_path}
