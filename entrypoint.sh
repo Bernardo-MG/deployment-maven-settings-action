@@ -122,6 +122,15 @@ settings_path="settings.xml"
          echo "</properties>"
       echo "</profile>";
 
+   # --------------
+   # Active profile
+   # --------------
+
+   # These profiles are used to set configuration specific to a version type
+   echo "<activeProfiles>"
+      echo "<activeProfile>deployment_site</activeProfile>"
+   echo "</activeProfiles>"
+
    echo "</profiles>";
 
    echo "</settings>";
