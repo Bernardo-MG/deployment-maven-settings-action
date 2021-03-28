@@ -26,7 +26,7 @@
 #
 # --- ENVIRONMENTAL VARIABLES ---
 #
-# The following environmental variables are required by the script, but read by Maven:
+# The following environmental variables are required by the script:
 #
 # - DEPLOY_USER: string, user for the releases repo
 # - DEPLOY_PASSWORD: string, password for the releases repo
